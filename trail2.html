@@ -1,0 +1,89 @@
+<html>
+<head>
+    <title>Heated Sleeping Bags</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('img6.jpg') center/cover fixed;
+            color: #333;
+            overflow: hidden;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 1em;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #444;
+            color: white;
+            padding: 0.5em;
+            text-align: center;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+            margin: 0 15px;
+        }
+
+        section {
+            padding: 1em;
+            text-align: center;
+        }
+
+        img {
+            max-width: 100vw;
+            height: auto;
+            display: none;
+            margin: 0 auto;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1em;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Heated Sleeping Bags</h1>
+    </header>
+
+    <nav>
+        <a href="trail.html">Home</a>
+        <a href="trail2.html">Images</a>
+        <a href="trail3.html">ContactUs</a>
+    </nav>
+
+    <section>
+        <img src="img11.jpeg" alt="Image 1">
+        <img src="img22.jpeg" alt="Image 2">
+        <img src="img33.jpeg" alt="Image 3">
+    </section>
+
+    <script>
+        const images = document.querySelectorAll('img');
+        let index = 0;
+
+        function showImage() {
+            images.forEach(img => (img.style.display = 'none'));
+            images[index].style.display = 'block';
+            index = (index + 1) % images.length;
+            setTimeout(showImage, 2000);
+        }
+
+        showImage();
+    </script>
+</body>
+</html>
